@@ -167,7 +167,7 @@ async function sendChatMessage() {
   
   try {
     // Send message to server
-    const response = await fetch('co-pilot-final-production.up.railway.app', {
+    const response = await fetch('https://co-pilot-final-production.up.railway.app/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
