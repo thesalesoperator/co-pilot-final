@@ -1,0 +1,158 @@
+/* Base styles */
+.close-assistant-overlay {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 320px;
+  height: 480px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  resize: both;
+  min-width: 280px;
+  min-height: 320px;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.close-assistant-overlay-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #0b1e37, #094696);
+  color: white;
+  cursor: move;
+}
+
+.close-assistant-overlay-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  color: white;
+}
+
+.close-assistant-overlay-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.close-assistant-overlay-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.close-assistant-overlay-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.close-assistant-overlay-content {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Chat styles */
+.close-assistant-chat {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #f7f9fc;
+}
+
+.close-assistant-chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.close-assistant-chat-message {
+  max-width: 80%;
+  padding: 12px 16px;
+  border-radius: 16px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.close-assistant-chat-message.user {
+  align-self: flex-end;
+  background: linear-gradient(135deg, #ff0043, #ff9855);
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.close-assistant-chat-message.bot {
+  align-self: flex-start;
+  background: white;
+  color: #0b1e37;
+  border: 1px solid #e6e9ef;
+  border-bottom-left-radius: 4px;
+}
+
+.close-assistant-chat-message.error {
+  background: #fff2f2;
+  color: #ff0043;
+  border-color: #ffccd6;
+}
+
+.close-assistant-chat-input-container {
+  padding: 16px;
+  background: white;
+  border-top: 1px solid #e6e9ef;
+  display: flex;
+  gap: 12px;
+}
+
+.close-assistant-chat-input {
+  flex: 1;
+  border: 1px solid #e6e9ef;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 14px;
+  resize: none;
+  min-height: 40px;
+  max-height: 120px;
+  outline: none;
+}
+
+.close-assistant-chat-input:focus {
+  border-color: #094696;
+  box-shadow: 0 0 0 2px rgba(9, 70, 150, 0.1);
+}
+
+.close-assistant-chat-send {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #ff0043, #ff9855);
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.close-assistant-chat-send:hover {
+  transform: scale(1.05);
+}

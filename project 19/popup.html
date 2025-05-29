@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Close CRM Co-Pilot</title>
+  <link rel="stylesheet" href="styles/popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Close CRM Co-Pilot</h1>
+    </header>
+    
+    <main>
+      <div class="toggle-section">
+        <button id="toggleOverlay" class="btn primary">
+          <span class="icon">👨‍✈️</span>
+          <span>Toggle Co-Pilot</span>
+        </button>
+        
+        <div class="status-indicator">
+          <span id="status-dot" class="status-dot"></span>
+          <span id="status-text">Inactive</span>
+        </div>
+      </div>
+      
+      <div class="quick-actions">
+        <h2>Quick Actions</h2>
+        <button id="viewAll" class="btn secondary">
+          <span class="icon">📋</span>
+          <span>View All Training Videos</span>
+        </button>
+        <button id="goToOptions" class="btn secondary">
+          <span class="icon">⚙️</span>
+          <span>Manage Keywords</span>
+        </button>
+      </div>
+      
+      <div class="stats">
+        <div class="stat-card">
+          <span class="stat-number" id="keywordCount">0</span>
+          <span class="stat-label">Keywords</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" id="videoCount">0</span>
+          <span class="stat-label">Videos</span>
+        </div>
+      </div>
+    </main>
+    
+    <footer>
+      <p>Close CRM Co-Pilot v1.0.0</p>
+    </footer>
+  </div>
+  
+  <script src="scripts/popup.js"></script>
+</body>
+</html>

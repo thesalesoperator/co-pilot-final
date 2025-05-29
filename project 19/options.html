@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Close CRM Co-Pilot - Options</title>
+  <link rel="stylesheet" href="styles/options.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Close CRM Co-Pilot</h1>
+      <p>Manage keywords and training videos</p>
+    </header>
+    
+    <main>
+      <section class="add-keyword-section">
+        <h2>Add New Keyword</h2>
+        <form id="keywordForm">
+          <div class="form-group">
+            <label for="keyword">Keyword</label>
+            <input type="text" id="keyword" placeholder="Enter keyword to highlight" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="videoTitle">Video Title</label>
+            <input type="text" id="videoTitle" placeholder="Enter video title" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="videoUrl">Video URL</label>
+            <input type="url" id="videoUrl" placeholder="https://example.com/video" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="description">Description (Optional)</label>
+            <textarea id="description" placeholder="Brief description of the video"></textarea>
+          </div>
+          
+          <button type="submit" class="btn primary">Add Keyword</button>
+        </form>
+      </section>
+      
+      <section class="keywords-list-section">
+        <div class="section-header">
+          <h2>Manage Keywords</h2>
+          <div class="actions">
+            <button id="importBtn" class="btn secondary sm">Import</button>
+            <button id="exportBtn" class="btn secondary sm">Export</button>
+          </div>
+        </div>
+        
+        <div class="search-container">
+          <input type="text" id="searchKeywords" placeholder="Search keywords...">
+        </div>
+        
+        <div class="keywords-list" id="keywordsList">
+          <!-- Keywords will be listed here dynamically -->
+          <div class="empty-state">
+            <p>No keywords added yet. Add your first keyword above.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <footer>
+      <p>Close CRM Co-Pilot v1.0.0</p>
+    </footer>
+  </div>
+  
+  <script src="scripts/options.js"></script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+:root {
+  --dark-blue: #0b1e37;
+  --light-blue: #094696;
+  --main-orange: #ff9855;
+  --orange: #ffbe57;
+  --pink: #ff0043;
+  --text-primary: #0b1e37;
+  --text-secondary: #094696;
+  --text-light: #ffffff;
+  --background: #ffffff;
+  --background-light: #f7f9fc;
+  --border: #e6e9ef;
+  --shadow: rgba(11, 30, 55, 0.1);
+  
+  --gradient-warm: linear-gradient(135deg, #ff0043, #ff9855, #ffbe57);
+  --gradient-cool: linear-gradient(135deg, #0b1e37, #094696);
+  
+  --highlight-glow: rgba(255, 152, 85, 0.5);
+  
+  --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  
+  --shadow-sm: 0 2px 4px var(--shadow);
+  --shadow-md: 0 4px 8px var(--shadow);
+  --shadow-lg: 0 8px 16px var(--shadow);
+  
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--background-light);
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+}
+
+header {
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--dark-blue);
+  margin-bottom: var(--spacing-xs);
+}
+
+header p {
+  color: var(--text-secondary);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+}
+
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+
+section {
+  background-color: var(--background);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-primary);
+}
+
+.form-group {
+  margin-bottom: var(--spacing-md);
+}
+
+label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+input, textarea {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--light-blue);
+  box-shadow: 0 0 0 2px rgba(9, 70, 150, 0.2);
+}
+
+textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.btn.sm {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: 12px;
+}
+
+.btn.primary {
+  background: var(--gradient-warm);
+  color: var(--text-light);
+}
+
+.btn.primary:hover {
+  background: var(--main-orange);
+}
+
+.btn.secondary {
+  background: var(--gradient-cool);
+  color: var(--text-light);
+}
+
+.btn.secondary:hover {
+  background: var(--light-blue);
+}
+
+.btn.icon {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.search-container {
+  margin-bottom: var(--spacing-md);
+}
+
+.keywords-list {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.empty-state {
+  padding: var(--spacing-lg);
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.keyword-item {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--border);
+}
+
+.keyword-item:last-child {
+  border-bottom: none;
+}
+
+.keyword-header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
+}
+
+.keyword-text {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--pink);
+}
+
+.video-title {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.keyword-description {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.video-url {
+  font-size: 14px;
+  color: var(--light-blue);
+  text-decoration: none;
+}
+
+.video-url:hover {
+  text-decoration: underline;
+}
+
+.keyword-actions {
+  display: flex;
+  gap: var(--spacing-xs);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background-color: var(--background);
+  border-radius: var(--radius-lg);
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--border);
+  background: var(--gradient-cool);
+  color: var(--text-light);
+}
+
+.modal-header h2 {
+  margin: 0;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text-light);
+}
+
+.modal-body {
+  padding: var(--spacing-md);
+}
+
+#exportData, #importData {
+  width: 100%;
+  min-height: 150px;
+  margin: var(--spacing-md) 0;
+  font-family: monospace;
+  padding: var(--spacing-md);
+}
+
+.import-options {
+  margin: var(--spacing-md) 0;
+}
+
+.import-options label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-xs);
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  text-align: center;
+  margin-top: var(--spacing-lg);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 14px;
+}
